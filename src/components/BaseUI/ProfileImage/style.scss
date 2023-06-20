@@ -1,0 +1,28 @@
+@import "../../../App.scss";
+
+.img-holder{
+    border-radius: 50%!important;
+    height: 180px;
+    width: 180px;
+}
+.img-uploader-wrapper{
+    width: auto;
+    position: relative;
+    .edit-wrapper{
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: $white;  
+        font-size: 18px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        position: absolute;
+        top: 155px;
+        color: $light-gray;
+        left: 115px;
+        border: 1px solid $delicate-gray;
+        &:hover{
+            color: $dark-gray;
+        }
+    }
+}

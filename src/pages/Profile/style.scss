@@ -1,0 +1,80 @@
+@import "../../App.scss";
+
+.profile-header{
+    .edit-profile-btn{
+        margin: 15px 0px;
+    }
+}
+.profile-form-wrapper{
+    .card{
+        background-color: $black-squeeze !important;
+    }
+    .card-header{
+        background-color: $white !important;
+    }
+    .card-profile-image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .profile-readonly-mode{
+        .info-wrapper{
+            .form-label{
+                font-weight: bold;
+            }
+        }
+        .profile-left-wrapper{
+            width: 200px;
+            margin: auto;
+            text-align: center;
+            z-index: 1;
+            .form-label{
+                font-size: 20px;
+                margin: 10px 0px 0px 0px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .profile-img{
+        height: 180px;
+        width: 180px;
+        border-radius: 50%;
+    }
+}
+@media (min-width: 1200px){
+    .profile-form-wrapper{
+        .container{
+            max-width: 1096px;
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) { 
+    .profile-form-wrapper{
+        .container{
+            max-width: 722px;
+        }
+    }    
+}
+@include media-breakpoint-up(md) {
+    .profile-form-wrapper{
+        .container{
+            max-width: 498px;
+        }
+    } 
+}
+@include media-breakpoint-up(lg) { 
+    .profile-form-wrapper{
+        .container{
+            max-width: 722px;
+        }
+    }
+}
+@include media-breakpoint-up(xl) {
+    .profile-form-wrapper{
+        .container{
+            max-width: 1096px;
+        }
+    }
+ }

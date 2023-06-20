@@ -1,0 +1,11 @@
+
+.error-page {
+    background-image: url('../../assets/images/bg-pattern-light.svg');
+    background-size: cover;
+    background-position: center;
+    .error-text {
+        color: #727cf5;
+        font-size: 5.25rem;
+        line-height: 5.625rem;
+    }
+}

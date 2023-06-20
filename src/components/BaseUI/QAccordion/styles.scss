@@ -1,0 +1,18 @@
+.qaccordion-wrapper{
+ .accordian-header{
+     position: relative;
+ }
+ .accordion .active .accordian-header i{
+    transform: rotate(-180deg);
+ }
+ .accordian-header i{
+     position: absolute;
+     right:10px;
+    transition: transform .2s ease-in-out;
+
+ }
+ .accordion .card {
+     margin: 0px;
+     box-shadow: none;
+ }
+}
