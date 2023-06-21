@@ -1,0 +1,82 @@
+import React, { useState } from 'react';
+
+const ValidationComponent = () => {
+  const [designation, setDesignation] = useState('');
+  const [department, setDepartment] = useState('');
+  const [users, setUsers] = useState([]);
+  const [states, setStates] = useState([]);
+  const [cities, setCities] = useState([]);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleDesignationChange = (event) => {
+    setDesignation(event.target.value);
+  };
+
+  const handleDepartmentChange = (event) => {
+    setDepartment(event.target.value);
+  };
+
+  const handleUserChange = (event) => {
+    setUsers(event.target.value);
+  };
+
+  const handleStateChange = (event) => {
+    setStates(event.target.value);
+  };
+
+  const handleCityChange = (event) => {
+    setCities(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // validate selected options
+    if (designation === '' || department === '' || users.length === 0 || states.length === 0 || cities.length === 0) {
+      setErrorMessage('Please select all options');
+    } else {
+      setErrorMessage('');
+      // submit form
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        Designation:
+        <input type="text" value={designation} onChange={handleDesignationChange} />
+      </label>
+      <label>
+        Department:
+        <input type="text" value={department} onChange={handleDepartmentChange} />
+      </label>
+      <label>
+        Users:
+        <select multiple value={users} onChange={handleUserChange}>
+          <option value="user1">User 1</option>
+          <option value="user2">User 2</option>
+          <option value="user3">User 3</option>
+        </select>
+      </label>
+      <label>
+        States:
+        <select multiple value={states} onChange={handleStateChange}>
+          <option value="state1">State 1</option>
+          <option value="state2">State 2</option>
+          <option value="state3">State 3</option>
+        </select>
+      </label>
+      <label>
+        Cities:
+        <select multiple value={cities} onChange={handleCityChange}>
+          <option value="city1">City 1</option>
+          <option value="city2">City 2</option>
+          <option value="city3">City 3</option>
+        </select>
+      </label>
+      {errorMessage && <p>{errorMessage}</p>}
+      <button type="submit">Submit</button>
+    </form>
+  );
+};
+
+export default ValidationComponent;
