@@ -1,7 +1,6 @@
 import unittest
 import json
 from flask import Flask
-from employee_api import add_employee
 
 class APITestCase(unittest.TestCase):
     def setUp(self):
